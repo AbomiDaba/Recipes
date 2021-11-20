@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 400px;
+    height: 300px;
+    padding-left: 20px;
+    background-color: rgb(56, 54, 54);
+    margin: auto;
+}
+#blue {
+    text-align: center;
+    color: blue;
+}
+h1{
+    color: white;
+}
+.underline{
+    text-decoration: underline;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgb(56, 54, 54);
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    
+}
+a{
+    text-decoration: none;
+    color: blue;
+
+}
+p{
+    color: white;
+}
+h1, p, a{
+    font-family: cursive;
+}

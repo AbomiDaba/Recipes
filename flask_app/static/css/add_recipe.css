@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+    width: inherit;
+    background-color: rgb(56, 54, 54);
+    padding: 30px;
+    border-radius: 5px;
+}
+button{
+    width: 100px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: blue;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+h1{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+label{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: white;
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgb(56, 54, 54);
+
+}
+form{
+    width: 500px;
+    margin: auto;
+    vertical-align: top;
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    
+}
+a{
+    text-decoration: none;
+    color: blue;
+
+}
+input{
+    border-radius: 10px;
+    height: 20px;
+    border-color: white;
+}
+textarea{
+    border-color: white;
+    border-radius: 10px;
+    border-style: none;
+}
+p{
+    color: blue;
+    text-align: center;
+}
+.header h2{
+    color: blue;
+    font-family: cursive;
+}
+#no{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    margin-top: 5px;
+}
+#yes{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+}
+.date{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+#one{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#two{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+button,h1,label,a, p{
+    font-family: cursive;
+}

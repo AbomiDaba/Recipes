@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgb(56, 54, 54);
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    
+}
+a{
+    text-decoration: none;
+    color: blue;
+
+}
+h2{
+    margin: auto;
+    text-align: center;
+    color: blue;
+    
+}
+
+table{
+    border: 1px solid rgb(238, 230, 230);
+    border-collapse: collapse; 
+    margin: auto;
+    width: 700px;
+}
+tr{
+    border-bottom: 1px solid rgb(238, 230, 230);
+    color: rgb(75, 72, 72);
+}
+tr:hover{
+    background-color: rgb(222, 226, 228);
+}
+td{
+    padding: 5px;
+    text-align: center;
+}
+
+h1{
+    color: white;
+}
+h1, h2, tr, a{
+    font-family: cursive;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/edit_recipe.css')}}">
+    <title>Edit Recipe</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome {{user.first_name}}!</h1>
+        <h2>Edit Your Recipe</h2>
+        <div class="links">
+            <a href="/users/dashboard">Dashboard</a>
+            <a href="/users/logout">Logout</a>
+        </div>
+    </div>
+    {% with messages = get_flashed_messages(category_filter=['recipe']) %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+    <form action="/recipes/update/{{recipe.id}}", method="post">
+        <div class="wrapper">
+            <div id="one">
+                <label for="name">Name:</label>
+                <input type="text" name="name", value="{{recipe.name}}">
+                <label for="description">Description:</label>
+                <textarea name="description"  cols="15" rows="5">{{recipe.description}}</textarea>
+                <label for="instructions">Instructions:</label>
+                <textarea name="instructions" cols="15" rows="5">{{recipe.instructions}}</textarea>
+            </div>
+            <div id="two">
+                <label for="date_made">Date Made:</label>
+                <input class="date" type="date" value="{{recipe.date_made.strftime('%Y-%m-%d')}}" name="date_made">
+                <p><strong> Under 30 minutes?:</strong></p>
+                {% if recipe.under_30 == 'Yes' %}
+                    <div id="no">
+                        <input type="radio" name="under_30" id="No" value="No">
+                        <label for="No">No</label>
+                    </div>
+                    <div id="yes">
+                        <input type="radio" name="under_30" id="Yes" checked = 'checked' value="Yes">
+                        <label for="Yes">Yes</label>
+                    </div>
+                {% else %}
+                    <div id="no">
+                        <input type="radio" name="under_30" id="No" checked = 'checked' value="No">
+                        <label for="No">No</label>
+                    </div>
+                    <div id="yes">
+                        <input type="radio" name="under_30" id="Yes" value="Yes">
+                        <label for="Yes">Yes</label>
+                    </div>
+                {% endif %}
+                
+                <button>edit</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
